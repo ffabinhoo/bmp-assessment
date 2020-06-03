@@ -23,3 +23,9 @@ Test: mvn test
 Packaging: mvn package, compiled jar in target/ folder
 
 Run: "cd target" | "java -jar bmp-assessment-0.0.1-SNAPSHOT.jar"
+
+commands:
+curl --location --request POST 'http://localhost:8080/counter-api/search' \
+--header 'Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==' \
+--header 'Content-Type: application/json' \
+--data-raw '{"searchText":["Duis", "Sed", "Donec","Augue","Pellentesque", "123"]}'
